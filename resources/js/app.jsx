@@ -1,6 +1,6 @@
 import './bootstrap';
-import '../css/app.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import '../css/app.css';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'remixicon/fonts/remixicon.css'

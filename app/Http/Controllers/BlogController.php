@@ -12,6 +12,7 @@ class BlogController extends Controller
         return Inertia::render('Blog');
     }
     public function blogDetail($slug){
+        
         return Inertia::render('BlogDetail',['slug' => $slug]);
     }
 }

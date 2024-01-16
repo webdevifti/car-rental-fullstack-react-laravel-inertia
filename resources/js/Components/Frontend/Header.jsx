@@ -25,8 +25,13 @@ const Header = () => {
                         </Col>
                         <Col lg="6" md="6" sm="6">
                             <div className='header__top__right d-flex align-items-center justify-content-end gap-3'>
-                                <Link to="/login" className='d-flex align-items-center gap-1'><i className='ri-login-circle-line'></i> Login</Link>
-                                <Link to="registration" className='d-flex align-items-center gap-1'><i className='ri-user-line'></i> Register</Link>
+
+                                <NavLink classFrom="d-flex align-items-center gap-1" href={route('login')} active={route().current('login')}>
+                                    <i className='ri-login-circle-line'></i> Login
+                                </NavLink>
+                                <NavLink classFrom="d-flex align-items-center gap-1" href={route('register')} active={route().current('register')}>
+                                    <i className='ri-login-circle-line'></i> Register
+                                </NavLink>
                             </div>
                         </Col>
                     </Row>
@@ -68,7 +73,7 @@ const Header = () => {
                                 <NavLink href={route('front.contact')} active={route().current('front.contact')}>
                                     <i className='ri-phone-line'></i>Request a call
                                 </NavLink>
-                             
+
                             </button>
                         </Col>
                     </Row>
@@ -97,11 +102,7 @@ const Header = () => {
                                 <NavLink href={route('front.contact')} active={route().current('front.contact')}>
                                     Contact
                                 </NavLink>
-                                {/* {
-                                    NavLinks.map((item, index) => (
-                                        <NavLink to={item.path} className={navClass => navClass.isActive ? 'nav__active nav__item' : 'nav__item'} key={index}>{item.display}</NavLink>
-                                    ))
-                                } */}
+                              
                             </div>
                         </div>
                         <div className="nav__right">
